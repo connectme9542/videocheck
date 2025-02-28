@@ -47,7 +47,7 @@ def terabox_fetch():
     data = request.get_json()
     share_url = data.get("url")
 
-    if not share_url or "terabox" not in share_url:
+    if not share_url or "tera" not in share_url:
         return jsonify({"status": "error", "message": "Invalid Terabox URL"}), 400
 
     result, error = fetch_terabox_direct_url(share_url)
